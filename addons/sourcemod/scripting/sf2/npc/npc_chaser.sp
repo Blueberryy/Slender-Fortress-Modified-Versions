@@ -5861,8 +5861,7 @@ public void SlenderChaseBossProcessMovement(int iBoss)
 		
 		if (!g_bNPCVelocityCancel[iBossIndex] && IsSpaceOccupiedIgnorePlayers(flMyPos, hullcheckmins, hullcheckmaxs, iBoss))//The boss will start to merge with shits, cancel out velocity.
 		{
-			float vec3Origin[3];
-			g_ILocomotion[iBossIndex].SetVelocity(vec3Origin);
+			g_ILocomotion[iBossIndex].SetVelocity(NULL_VECTOR);
 			g_bNPCVelocityCancel[iBossIndex] = true;
 		}
 	}
